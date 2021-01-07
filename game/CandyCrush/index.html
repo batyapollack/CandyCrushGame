@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Candy Crush</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+
+    <style>
+
+        .callout {
+            position: fixed;
+            text-align: center;
+            margin-top: 200px;
+            margin-left: 500px;
+            min-width: 500px;
+        }
+
+        .callout-header {
+            padding: 10px;
+            background: rgba(109, 127, 151, 1);
+            font-size: 20px;
+            color: black;
+        }
+
+        .callout-container {
+            padding: 15px;
+            width: 200px;
+            background-color: #e7b2b2;
+            color: black;
+            font-size: 15px;
+            min-width: 500px;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .closebtn:hover {
+            color: lightgrey;
+        }
+    </style>
+
+</head>
+
+
+<embed src="audio/music.mp3" loop="true" autostart="true" width="2" height="0">
+
+<body  background="images/candy-crush-background-2.png">
+<div id="page2" class="page2">
+    <div class="moves-board">
+        <h3>Moves</h3>
+        <h1 id="moves"></h1>
+    </div>
+    <div class="score-board">
+        <h3>score</h3>
+        <h1 id="score"></h1>
+    </div>
+
+    <div id="msgBox" style="display: none" class="callout">
+        <div class="callout-header">You loose! </div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <div class="callout-container">
+            <p>please try again</p>
+        </div>
+    </div>
+
+    <div class="grid"></div>
+
+</div>
+
+
+<div id="level" style="background: black; display: none" >
+    <h1 id="msg" class="textNextLeve"> congratulation!!
+        <button id='clickNextLevel' class="btnNextLevel"> Next Level</button>
+        <canvas id="canvas"></canvas>
+    </h1>
+</div>
+
+</body>
+</html>
